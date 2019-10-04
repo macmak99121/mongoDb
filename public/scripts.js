@@ -9,25 +9,19 @@ function random_bg_color()
 }
 
 
-function toggle_visibility(id) 
+function toggle_visibility() 
 {
-    var aut = document.getElementById("author");
-    if ( aut.style.display == 'block' )
-        aut.style.display = 'none';
+    for (let divs of document.querySelectorAll('.container'))
+    {
+    if( divs.style.display == 'block' )
+    {
+        divs.style.display = 'none';
+    }
     else
-        aut.style.display = 'block';
-
-    var q = document.getElementById("quote");
-    if ( q.style.display == 'block' )
-    q.style.display = 'none';
-    else
-    q.style.display = 'block';  
-
-    var t = document.getElementById("timestamp");
-    if ( t.style.display == 'block' )
-        t.style.display = 'none';
-    else
-        t.style.display = 'block';
+    {
+        divs.style.display = 'block';
+    }
+    }
 }
 
         

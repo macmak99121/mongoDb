@@ -27,12 +27,14 @@
 
     <hr>
     <% for(let i in data){ %>
+    <div class = 'container'>
         <div id = author><%= data[i].author %></div>
         <div id = quote> - <%= data[i].quote %></div>
         <div id = timestamp> <%= data[i].timestamp %></div>
         <a id=edit href="/quotes/edit/<%=data[i]._id%>"><i class = "fas fa-edit"></i></a>
         <a id=delete href="/quotes/delete/<%=data[i]._id%>"><i class="fas fa-trash-alt"></i></a>
         <hr>
+    </div>
     <%  } %>
 
 

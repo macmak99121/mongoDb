@@ -15,4 +15,5 @@ app.use(express.static(__dirname+"/public"));
 app.set("view engine", "ejs");
 require("./routes/quotes-routes")(app);
 
-app.listen(3000, function(){console.log("localhost:3000/quotes")});
+const port = process.env.PORT || 3000;
+app.listen(port, ()=> console.log("app started/reloaded successfully"));

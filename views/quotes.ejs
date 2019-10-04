@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quotes</title>
+    <script src="https://kit.fontawesome.com/2215b1a06a.js" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="quotes.css">
+</head>
+<body>
+    <% %>
+    <form action="/quotes/create" method="post">
+        <input type="text" name="author" placeholder="Title">
+        <br>
+        <input type="text" name="quote" placeholder="your text...">
+        <br>
+        <div id = saveInput><input type="submit" value="Lägg till"></div>
+    </form>
+    <% %>
+    
+    <div id=settings>
+        <div id=bkColor onclick="random_bg_color();"><i class="fas fa-palette"></i> </div>
+        <a id=hideAll onclick="toggle_visibility()"><i class="fas fa-eye-slash"></i> </a>
+    </div>
+
+    <hr>
+    <% for(let i in data){ %>
+        <div id = author><%= data[i].author %></div>
+        <div id = quote> - <%= data[i].quote %></div>
+        <div id = timestamp> <%= data[i].timestamp %></div>
+        <a id=edit href="/quotes/edit/<%=data[i]._id%>"><i class = "fas fa-edit"></i></a>
+        <a id=delete href="/quotes/delete/<%=data[i]._id%>"><i class="fas fa-trash-alt"></i></a>
+        <hr>
+    <%  } %>
+
+
+    
+</body>
+</html>

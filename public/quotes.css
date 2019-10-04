@@ -1,0 +1,89 @@
+body, html
+{
+    background-color: black;
+    color: white;
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x:hidden;
+    position: absolute;
+}
+
+a
+{
+    color: whitesmoke;
+    font-size: 17px;
+    height: 3vh;
+    width: 3vh;
+    display: inline;
+}
+
+input
+{
+    width: 100%;
+    height: 10vh;
+    padding: 1vh;
+    font-size: 1.3rem;
+    box-sizing: border-box;
+}
+
+#author, #quote, #timestamp, a
+{
+    margin-left: 2vh;
+}
+
+#author
+{
+    width: 100%;
+    height: 10vh;
+    font-size: 50px;
+    text-align: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 1vh;
+    display:inline-block;
+}
+
+#quote
+{
+    width: 100%;
+    height: 10vh;
+    font-size: 22px;
+    font-style: italic;
+    padding-top: 1.5vh;
+    padding-bottom: 0.5vh;
+    display:inline-block;
+}
+
+#timestamp
+{
+    width: 100%;
+    min-height: 5vh;
+    font-size: 15px;
+    padding-bottom: 0.5vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display:inline-block;
+}
+
+#settings
+{
+    width: 100%;
+    min-height: 10vh;
+}
+
+#bkColor, #hideAll
+{
+    margin: auto;
+    margin-top: 1.3%;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 2.5vh;
+    display: inline-block;
+}
+
+#hideAll
+{
+    cursor: pointer;
+}
+
+
